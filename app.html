@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+      .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .logo {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 40px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar button {
+      display: block;
+      color: rgb(19, 4, 4);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar button:hover {
+      background-color: #9370DB;
+    }
+
+    .hidden {
+      display: none;
+    }
+</style>
+<body>
+  <nav clss="navbar">
+    
+    
+      <ul>
+        <li><P class="logo">QUIZZZ</P></li>
+        <li><button href="login.html" id="loginLink" >Login</button></li>
+        <li><button id="createQuizLink" class="hidden">Create Quiz</button></li>
+        
+        <li><button id="takeQuizLink">Take Quiz</button></li>
+        <li><button id="viewResults">View Results</button></li>
+        
+      </ul>
+    </nav>
+  
+    <div id="content" >
+      <div id="loginForm" class="hidden">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginButton">Login</button>
+      </div>
+      
+  </nav>
+  <div id="content">
+    <div id="createQuiz" class="hidden">
+      <h2>Create Quiz</h2>
+      <h3><input type="text" id="quizTitle" placeholder="Quiz Title"><br><br></h3>
+      <div id="questions">
+        <div class="question">
+          <input type="text" placeholder="Question" class="questionText" required><br><br><br>
+          <input type="text" placeholder="Option 1" class="option" required><br><br>
+          <input type="text" placeholder="Option 2" class="option" required><br><br>
+          <input type="text" placeholder="Option 3" class="option" required><br><br>
+          <input type="text" placeholder="Option 4" class="option" required><br><br>
+          <input type="text" placeholder="Correct Answer" class="correctAnswer"><br>
+          ------------------------------------------------------
+        </div>
+      </div>
+      <button id="addQuestion">Add Question</button>
+      <button id="saveQuiz">Save Quiz</button>
+      <p id="quizCode"></p>
+    </div>
+    <div id="takeQuiz" class="hidden">
+      <h2>Take Quiz</h2>
+      <input type="text"  id='userNameInput'placeholder="Enter your name">
+      <input type="text" id="quizCodeInput" placeholder="Enter Quiz Code">
+      <button id="loadQuiz">Start quiz</button>
+      <div id="quizContainer"></div>
+    </div>
+    <div id="viewResults" class="hidden">
+      <h2>Quiz Results</h2>
+      
+    </div>
+    <div id="result_table" class="hidden"></div>
+  </div>
+
+  
+
+
+</div>
+
+  <p id="result"></p>
+  <script src="script.try.js"></script>
+  <!-- <script src="server.js"></script> -->
+</body>
+</html>
+
+
+
+
+
+
+
+

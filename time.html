@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="st" onclick="strt()">start</button>
+    <button id="sp" onclick="stp()">stop</button>
+
+
+</body>
+    <script>
+        let c;
+        function change(){
+            a=Math.random()*1000;
+            b=(a%16).tostring(16);
+            document.style.body.backgroundColor=b;
+        }
+        function strt(){
+            c=setInterval(change,2000)
+        }
+        function stp(){
+            clearInterval(c)
+        }
+    </script>
+
+</html>
+<style>
+    body{
+        background-color: ;
+    }
+</style> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+</head>
+<body>
+    <button id="st" onclick="startChange()">Start</button>
+    <button id="sp" onclick="stopChange()">Stop</button>
+    nmmmmmmm,,
+
+    <script>
+        let intervalId;
+
+        s=function change() {
+
+            let c='';
+            q='0123456789abcdef'
+            for (let i=0;i<6;i++){
+                s=Math.floor(Math.random()*16)
+                c+=q[s]
+            }
+
+            // document.body.style.backgroundColor = c;
+            console.log(2);
+            console.log(c);
+            document.body.style.backgroundColor=c;
+        }
+
+        function startChange() {
+            console.log(2);
+            intervalId = setInterval(s, 2000);
+        }
+
+        function stopChange() {
+            console.log('3');
+            clearInterval(intervalId);
+        }
+    </script>
+</body>
+</html>
